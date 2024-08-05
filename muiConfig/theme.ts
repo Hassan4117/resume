@@ -21,6 +21,9 @@ declare module "@mui/material/styles" {
     shamRock: string;
     paua: string;
     suvaGrey: string;
+    link: string;
+    lightBlue900: string;
+    text: string;
   }
 }
 
@@ -50,9 +53,7 @@ const breakpoints = createBreakpoints({ ...customBreakpoints });
 export const theme = createTheme({
   palette: {
     common: {
-      shamRock: colors.shamRock,
-      paua: colors.paua,
-      suvaGrey: colors.suvarGrey,
+      ...colors,
     },
   },
   typography: {

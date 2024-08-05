@@ -1,4 +1,14 @@
-import { Avatar, Box, Button, Divider, Drawer, styled, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { MyImage } from "assets";
 import Link from "next/link";
 import { ReactElement, useEffect, useState } from "react";
@@ -27,8 +37,8 @@ const SidebarContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   height: "100%",
   overflowY: "scroll",
-  background: theme.palette.common.shamRock,
-  padding: "50px 30px",
+  background: theme.palette.info.dark,
+  padding: "30px 15px",
   color: theme.palette.background.paper,
 
   [theme.breakpoints.down("md")]: {
@@ -40,13 +50,13 @@ const ChildrenWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   maxWidth: "1200px",
   margin: "0 auto",
-  padding: "50px 30px",
+  padding: "30px 24px",
   flexDirection: "column",
   display: "flex",
   alignItems: "flex-start",
 
   [theme.breakpoints.down("md")]: {
-    padding: "30px 15px",
+    padding: "20px 12px",
   },
 }));
 
@@ -59,8 +69,9 @@ const Body = styled(Box)(({ theme }) => ({
 }));
 
 const Footer = styled(Box)(({ theme }) => ({
-  padding: "50px 30px",
-  color: "#c0c0c0",
+  padding: "30px 24px",
+  color: theme.palette.common.text,
+  marginTop: "auto",
   background: "#fafafa",
   fontSize: "12px",
 
@@ -84,7 +95,7 @@ const SidebarName = styled(Typography)(({ theme }) => ({
   textAlign: "center",
   margin: "20px auto",
   fontWeight: 600,
-  fontSize: "24px",
+  fontSize: "20px",
   color: theme.palette.background.paper,
 
   [theme.breakpoints.down("md")]: {
@@ -125,8 +136,7 @@ const Role = styled(Typography)(({ theme }) => ({
   margin: "0 0 30px",
   fontWeight: 500,
   fontSize: "16px",
-  color: theme.palette.common.suvaGrey,
-  opacity: 0.5,
+  color: theme.palette.common.text,
 
   [theme.breakpoints.down("md")]: {
     fontSize: "14px",
@@ -161,10 +171,6 @@ const Layout = ({ children }: LayoutProps) => {
       label: "Experience",
       route: "/experience",
     },
-    {
-      label: "Skills",
-      route: "/skills",
-    },
   ];
 
   const NAME = "Muhammad Hassan Minhas";
@@ -195,17 +201,23 @@ const Layout = ({ children }: LayoutProps) => {
               <MenuButton onClick={() => setOpen(true)}>
                 <MenuIcon />
               </MenuButton>
-              <Drawer anchor={"left"} open={open} onClose={() => setOpen(false)}>
+              <Drawer
+                anchor={"left"}
+                open={open}
+                onClose={() => setOpen(false)}
+              >
                 <SidebarContent />
               </Drawer>
             </>
           )}
           <Name>{NAME}</Name>
-          <Role>{"Full Stack (React js + Nodejs) Developer"}</Role>
-          <Divider sx={{ marginBottom: "50px", width: "100%" }} />
+          <Role>{"MERN Stack Developer"}</Role>
+          <Divider sx={{ marginBottom: "20px", width: "100%" }} />
           {children}
         </ChildrenWrapper>
-        <Footer>{new Date().getFullYear() + " "}© Hassan Minhas.</Footer>
+        <Footer>
+          {new Date().getFullYear() + " "}© Muhammad Hassan Minhas.
+        </Footer>
       </Body>
     </Wrapper>
   );

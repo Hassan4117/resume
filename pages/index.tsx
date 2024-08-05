@@ -11,9 +11,9 @@ const Wrapper = styled(Box)(({ theme }) => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
-  fontSize: "28px",
+  fontSize: "32px",
   color: theme.palette.common.paua,
-  marginBottom: "40px",
+  marginBottom: "20px",
 
   [theme.breakpoints.down("md")]: {
     fontSize: "22px",
@@ -34,9 +34,8 @@ const Heading = styled(Typography)(({ theme }) => ({
 const Description = styled(Typography)(({ theme }) => ({
   fontWeight: 400,
   fontSize: "16px",
-  color: theme.palette.common.paua,
-  opacity: 0.5,
-  marginBottom: "30px",
+  color: theme.palette.common.text,
+  marginBottom: "20px",
 
   [theme.breakpoints.down("md")]: {
     fontSize: "14px",
@@ -45,13 +44,13 @@ const Description = styled(Typography)(({ theme }) => ({
 
 const MuiDivider = styled(Divider)(({ theme }) => ({
   width: "100%",
-  marginBottom: "40px",
+  marginBottom: "20px",
 }));
 
 const Home = () => {
   const EDUCATION = [
     {
-      heading: "BS(CS)",
+      heading: "Bachelors in Computer Science",
       description: "FAST NUCES, Lahore",
     },
 
@@ -65,9 +64,20 @@ const Home = () => {
     <Wrapper>
       <Title sx={{ marginBottom: "20px" }}>About</Title>
       <Description>
-        Full stack developer with enthusiasm in learning more technologies and gaining more experience with various
-        frameworks. I want to be part of an organization where I can polish my skills and also take part in the growth
-        of the organization.
+        With over 4 years of experience in web development, I specialize in
+        creating dynamic and user-friendly web applications using React and
+        Next.js. My focus is on building engaging user interfaces that ensure a
+        seamless experience for users. I excel at translating complex design
+        concepts into functional and visually appealing applications. While my
+        primary expertise lies in frontend development, I also have experience
+        with Node.js, which enhances my understanding of the full development
+        stack. Looking ahead, I am eager to continue expanding my skills and
+        exploring new technologies that can further enhance web application
+        performance and user experience. I am passionate about staying
+        up-to-date with industry trends and incorporating innovative solutions
+        to solve emerging challenges. My goal is to contribute to projects that
+        push the boundaries of web development and deliver exceptional results
+        for users and clients alike.
       </Description>
       <MuiDivider />
       <Title>Education</Title>
@@ -80,13 +90,24 @@ const Home = () => {
       <MuiDivider />
       <Title sx={{ marginBottom: "20px" }}>Personal Information</Title>
       <Description sx={{ marginBottom: "10px" }}>
-        <LocationOnIcon color="inherit" fontSize="inherit" sx={{ margin: "0 3px -3px -5px" }} />
+        <LocationOnIcon
+          color="inherit"
+          fontSize="inherit"
+          sx={{ margin: "0 3px -3px -5px" }}
+        />
         <span>Lahore, Pakistan</span>
       </Description>
-      <Description sx={{ marginBottom: "10px" }}>Contact: +923316675018</Description>
-      <Description sx={{ marginBottom: "10px" }}>Email: hsnminhas@gmail.com</Description>
+      <Description sx={{ marginBottom: "10px" }}>
+        Contact: +923316675018
+      </Description>
+      <Description sx={{ marginBottom: "10px" }}>
+        Email: hsnminhas@gmail.com
+      </Description>
       <Description>
-        <a target="_blank" href="https://www.linkedin.com/in/muhammad-hassan-minhas-58b319175/">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/muhammad-hassan-minhas"
+        >
           Linkedin
         </a>
       </Description>
